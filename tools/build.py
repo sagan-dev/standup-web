@@ -5,6 +5,7 @@ import os, html
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://standup.sagan.dev"
 GITHUB = "https://github.com/sagan-dev/Standup"
+APPSTORE = "https://apps.apple.com/app/id6817507284"
 MAIL = "michal@sagan.dev"
 ASSET_V = "3"
 
@@ -14,7 +15,7 @@ T = {
   "nav": {"features": "Features", "privacy": "Privacy", "support": "Support"},
   "name": "Standup - Desk Remote Control",
   "tagline": "Your sit/stand desk, one click away in the menu bar — and it stands up before your meetings.",
-  "coming": "Coming soon to the Mac App Store",
+  "coming": "Download on the Mac App Store",
   "opensrc": "Open-source edition",
   "footer_made": "Made by <a href=\"https://sagan.dev\">Michal Sagan</a> · <a href=\"https://sagan.dev\">sagan.dev</a>",
   "footer_disc": "Standup is an independent app and is not affiliated with, endorsed by or sponsored by IKEA or Linak. Product names are used only to describe compatibility.",
@@ -27,7 +28,7 @@ T = {
   "nav": {"features": "Funkcje", "privacy": "Prywatność", "support": "Wsparcie"},
   "name": "Standup - Desk Remote Control",
   "tagline": "Twoje biurko z regulacją wysokości pod ręką w pasku menu — i samo wstaje przed Twoimi spotkaniami.",
-  "coming": "Wkrótce w Mac App Store",
+  "coming": "Pobierz z Mac App Store",
   "opensrc": "Wersja open source",
   "footer_made": "Stworzone przez <a href=\"https://sagan.dev\">Michała Sagana</a> · <a href=\"https://sagan.dev\">sagan.dev</a>",
   "footer_disc": "Standup jest niezależną aplikacją i nie jest powiązany z firmami IKEA ani Linak, ani przez nie wspierany czy sponsorowany. Nazwy produktów służą wyłącznie do opisu zgodności.",
@@ -143,7 +144,7 @@ def landing(lang):
   <h1>{t['name']}</h1>
   <p class="sub">{html.escape(t['tagline'])}</p>
   <div class="btns">
-    <a class="btn primary" aria-disabled="true">{t['coming']}</a>
+    <a class="btn primary" href="{APPSTORE}">{t['coming']}</a>
     <a class="btn" href="{GITHUB}">{t['opensrc']}</a>
   </div>
   <div class="shot"><img src="/assets/popover.png" width="920" height="634" alt="Standup popover: current desk height, raise and lower buttons, stand and sit presets, and the meeting automation card"></div>
